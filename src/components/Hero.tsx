@@ -108,15 +108,41 @@ export function Hero() {
         </div>
       </motion.div>
 
-      {/* Launch App Button - Top Right */}
+      {/* Top Right - Links */}
       <motion.div
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
-        className="absolute top-4 right-4 md:top-6 md:right-6"
+        className="absolute top-4 right-4 md:top-6 md:right-6 flex flex-col md:flex-row items-end md:items-center gap-3 md:gap-4"
       >
         <a
-          href="https://diarybeast-front.vercel.app"
+          href="https://suiscan.xyz/testnet/object/0x5977fcc201cb4c5db52d8f40221a69b5d1814383780656ac79cdf775adb195d1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block font-mono text-xs md:text-sm transition-all text-primary/80 hover:text-primary underline decoration-primary/60 hover:decoration-primary"
+          style={{ textDecorationColor: 'var(--color-primary)' }}
+          title="View contract on SuiScan"
+        >
+          0x5977...195d1 (testnet)
+        </a>
+        <a
+          href="https://drive.google.com/file/d/1nubV7HVtVwNBdnDv_3jWaW6xyOMQxr42/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-4 py-2 md:px-6 md:py-3 bg-transparent hover:bg-primary/10 border border-primary/50 hover:border-primary rounded font-mono text-sm md:text-base transition-all text-primary"
+        >
+          Pitch
+        </a>
+        <a
+          href="https://x.com/0x10Shabsh"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-4 py-2 md:px-6 md:py-3 bg-transparent hover:bg-primary/10 border border-primary/50 hover:border-primary rounded font-mono text-sm md:text-base transition-all text-primary"
+        >
+          Contact me
+        </a>
+        <a
+          href="https://diarybeastv2.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-6 py-3 md:px-8 md:py-4 bg-transparent hover:bg-primary/10 border border-primary rounded font-mono text-base md:text-lg transition-all font-bold text-primary"
@@ -126,7 +152,7 @@ export function Hero() {
         </a>
       </motion.div>
 
-      <div className="max-w-7xl w-full mx-auto pt-24 md:pt-32">
+      <div className="max-w-7xl w-full mx-auto pt-64 md:pt-62">
         {/* Headline and Description - Above Everything */}
         <div className="w-full text-center mb-12">
           {/* Headline */}
@@ -148,9 +174,9 @@ export function Hero() {
             className="text-xl md:text-2xl mb-8"
             style={{ color: 'var(--text-secondary)' }}
           >
-            Your private diary with a digital companion that evolves with you.
+            What if your mental health had a face?
             <br />
-            Write. Reflect. Earn DIARY tokens on Base. Your entries are encrypted—only you can read them.
+            Write daily. Grow your Beast. Earn DIARY tokens on Sui. Your entries are encrypted—only you can read them.
           </motion.p>
 
           {/* Footer tagline with logos */}
@@ -158,33 +184,71 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex items-center justify-center gap-3 text-sm flex-wrap mb-16"
+            className="flex items-center justify-center gap-4 md:gap-6 text-base md:text-lg font-mono flex-wrap mb-64"
             style={{ color: 'var(--text-muted)' }}
           >
-            <div className="flex items-center gap-2">
-              <span>Built on</span>
-              <img
-                src="/assets/base.png"
-                alt="Base"
-                className="h-4 w-auto inline-block"
-              />
-              <span>Base</span>
-            </div>
-            <span>•</span>
-            <span>Your data, your rules</span>
-            <span>•</span>
+            <a
+              href="https://sui.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 hover:text-primary transition-colors group"
+            >
+              <div className="relative w-12 h-12 md:w-16 md:h-16">
+                <img
+                  src="/assets/sui-logo.svg"
+                  alt="Sui"
+                  className="w-full h-full object-contain group-hover:drop-shadow-[0_0_10px_rgba(99,102,241,0.6)] transition-all"
+                />
+              </div>
+              <span className="hidden sm:inline">Sui</span>
+            </a>
+            <span style={{ color: 'var(--text-muted)', opacity: 0.2 }}>•</span>
+            <a
+              href="https://www.walrus.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 hover:text-primary transition-colors group"
+            >
+              <div className="relative w-12 h-12 md:w-16 md:h-16 rounded-md bg-white/70 backdrop-blur-sm p-1.5 group-hover:bg-white/80 transition-all border border-white/40 shadow-lg">
+                <img
+                  src="/assets/walrus_logo.svg"
+                  alt="Walrus"
+                  className="w-full h-full object-contain contrast-150 brightness-105 group-hover:drop-shadow-[0_0_10px_rgba(0,229,255,0.6)] transition-all"
+                />
+              </div>
+              <span className="hidden sm:inline">Walrus</span>
+            </a>
+            <span style={{ color: 'var(--text-muted)', opacity: 0.2 }}>•</span>
+            <a
+              href="https://seal-docs.wal.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 hover:text-primary transition-colors group"
+            >
+              <div className="relative w-12 h-12 md:w-16 md:h-16">
+                <img
+                  src="/assets/seal_logo.png"
+                  alt="Seal"
+                  className="w-full h-full object-contain group-hover:drop-shadow-[0_0_10px_rgba(139,92,246,0.6)] transition-all"
+                />
+              </div>
+              <span className="hidden sm:inline">Seal</span>
+            </a>
+            <span style={{ color: 'var(--text-muted)', opacity: 0.2 }}>•</span>
             <a
               href="https://mubert.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+              className="flex items-center gap-3 hover:text-primary transition-colors group"
             >
-              <span>Music by</span>
-              <img
-                src="/assets/mubert.png"
-                alt="Mubert"
-                className="h-4 w-auto inline-block"
-              />
+              <div className="relative w-12 h-12 md:w-16 md:h-16">
+                <img
+                  src="/assets/mubert.png"
+                  alt="Mubert"
+                  className="w-full h-full object-contain group-hover:drop-shadow-[0_0_10px_rgba(168,85,247,0.5)] transition-all"
+                />
+              </div>
+              <span className="hidden sm:inline">Mubert</span>
             </a>
           </motion.div>
         </div>

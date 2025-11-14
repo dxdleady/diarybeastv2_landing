@@ -77,8 +77,30 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--bg-primary);
+    background-image: url('/assets/grid-background.svg');
+    background-size: 2000px 2000px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    min-height: 100vh;
     color: var(--text-primary);
     line-height: 1.5;
+    animation: backgroundMove 30s ease-in-out infinite;
+  }
+
+  @keyframes backgroundMove {
+    0%, 100% {
+      background-position: center center;
+    }
+    25% {
+      background-position: center calc(50% + 25px);
+    }
+    50% {
+      background-position: center calc(50% + 30px);
+    }
+    75% {
+      background-position: center calc(50% + 25px);
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
