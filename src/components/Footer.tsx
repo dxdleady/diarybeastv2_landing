@@ -11,7 +11,7 @@ export function Footer() {
           {/* Center - Links */}
           <div className="flex flex-wrap gap-6 justify-center">
             <a
-              href="https://x.com/0x10Shabsh"
+              href="https://x.com/_DiaryBeast"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-70 transition-all"
