@@ -1,0 +1,25 @@
+{
+  "name": "DiaryBeast",
+  "short_name": "DiaryBeast",
+  "description": "Your private diary with a digital companion that evolves with you. Write. Reflect. Earn DIARY tokens on Base.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0E1A",
+  "theme_color": "#0A0E1A",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/diary-beast-black.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/diary-beast-logo-colored.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
+
